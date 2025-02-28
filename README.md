@@ -8,9 +8,6 @@ Then visit the following Github repository: [https://github.com/Kuzma02/MERN-Log
 
 ![login desktop page](https://github.com/Kuzma02/Login-Page-In-React/assets/138793624/e9bbc633-2eaf-48e5-95fc-050e6666d2d9)
 
-# Phone Screen
-
-![login mobile page](https://github.com/Kuzma02/Login-Page-In-React/assets/138793624/825a6712-43f3-412d-a756-763f438e6a18)
 
 
 # Features
