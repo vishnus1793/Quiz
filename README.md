@@ -24,3 +24,4 @@ To get started with this project, clone the repository and install the dependenc
 2. Download the repository
 3. Open the downloaded folder in your terminal of choice and write: npm install
 4. After everything has installed write: npm run dev
+"# Quiz" 
