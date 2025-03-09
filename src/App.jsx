@@ -27,27 +27,75 @@ export default function App() {
         {isWindows || isVerified ? (
           <Login />
         ) : (
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-red-500">Access Denied</h1>
-            <p className="mt-2 text-lg">This page is only accessible on Windows.</p>
-            <div className="mt-4">
-              <input
-                type="password"
-                className="border p-2 rounded"
-                placeholder="Enter Security Code"
-                value={securityCode}
-                onChange={(e) => setSecurityCode(e.target.value)}
-              />
-              <button
-                className="ml-2 px-4 py-2 bg-blue-500 text-white rounded"
-                onClick={handleVerification}
-              >
-                Verify
-              </button>
-            </div>
+          <div className="access-box">
+            <h1>Access Denied</h1>
+            <p>This page is only accessible on Windows.</p>
+            <input
+              type="password"
+              className="access-input"
+              placeholder="Enter Security Code"
+              value={securityCode}
+              onChange={(e) => setSecurityCode(e.target.value)}
+            />
+            <button className="access-btn" onClick={handleVerification}>
+              Verify
+            </button>
           </div>
         )}
       </header>
+
+      <style>{`
+        /* Styles scoped only to Access Denied UI */
+        .access-box {
+          width: 300px;
+          padding: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+          background: #191919;
+          color: white;
+          border-radius: 14px;
+          box-shadow: 5px 5px 50px rgba(252, 5, 5, 0.7);
+        }
+
+        .access-box h1 {
+          color: red;
+          font-size: 24px;
+          margin-bottom: 10px;
+        }
+
+        .access-box p {
+          font-size: 16px;
+          color: white;
+        }
+
+        .access-input {
+          width: 90%;
+          padding: 10px;
+          margin: 10px 0;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          background: #333;
+          color: white;
+        }
+
+        .access-btn {
+          background: red;
+          color: white;
+          font-weight: bold;
+          padding: 10px 15px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+
+        .access-btn:hover {
+          background: darkred;
+        }
+      `}</style>
     </div>
   );
 }
