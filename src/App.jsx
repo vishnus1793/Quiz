@@ -21,6 +21,12 @@ export default function App() {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      handleVerification();
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -36,6 +42,7 @@ export default function App() {
               placeholder="Enter Security Code"
               value={securityCode}
               onChange={(e) => setSecurityCode(e.target.value)}
+              onKeyDown={handleKeyPress} // Detect Enter key press
             />
             <button className="access-btn" onClick={handleVerification}>
               Verify
